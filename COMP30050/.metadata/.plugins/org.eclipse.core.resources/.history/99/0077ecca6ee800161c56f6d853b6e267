@@ -1,0 +1,34 @@
+package poker;
+
+public class Main {
+	
+	public static void main(String[] args) {
+	    PlayingCard[] cards = new PlayingCard[52];
+	    int cardNumber = 0;
+		for(int i = 0; i < 4; i++)	// Loop through suits
+		{
+			for(int j = 0; j < 13; j++)	// Loop through faces
+			{
+				switch(i)	// Set suit 
+				{
+				case 0:
+					cards[cardNumber] = new PlayingCard( PlayingCard.faces[j], PlayingCard.HEARTS, j+1);
+					break;
+				case 1:
+					cards[cardNumber] = new PlayingCard( PlayingCard.faces[j], PlayingCard.DIAMONDS, j+1);
+					break;
+				case 2:
+					cards[cardNumber] = new PlayingCard( PlayingCard.faces[j], PlayingCard.CLUBS, j+1);
+					break;
+				case 3:
+					cards[cardNumber] = new PlayingCard( PlayingCard.faces[j], PlayingCard.SPADES, j+1);
+					break;
+				}
+				System.out.println(cards[cardNumber].ToString());
+				cardNumber++;
+			}
+		}
+	}
+	
+
+}

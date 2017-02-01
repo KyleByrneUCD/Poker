@@ -1,0 +1,17 @@
+package Poker;
+
+public class PlayingCard {
+	
+	private char suit, face;
+	private int faceValue, gameValue;
+	
+	static 
+	public PlayingCard(char cardSuit, int cardFaceValue, char cardFace, int cardGameValue)
+	{
+		suit = cardSuit;
+		face = cardFace;
+		faceValue = cardFaceValue;
+		gameValue = cardGameValue;
+	}
+
+}

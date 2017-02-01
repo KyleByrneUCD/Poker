@@ -1,0 +1,35 @@
+package poker;
+
+public class PlayingCard {
+	private char suit;
+	private String face;
+	private int faceValue;
+	private int gameValue;
+	
+	static public final char HEARTS = 'H';
+	static public final char DIAMONDS = 'D';
+	static public final char CLUBS = 'C';
+	static public final char SPADES = 'S';
+	
+	public PlayingCard(String cardFace, char cardSuit, int value)	// Constructor
+	{
+		suit = cardSuit;
+		face = cardFace;
+		faceValue = value;
+		//gameValue = cardGameValue;
+		if(face == "A")
+		{
+			gameValue = 14;
+		}
+		else
+		{
+			gameValue = value;
+		}
+	}
+	
+	public String ToString()	//ToString Method
+	{
+		return this.face + this.suit + " " + this.gameValue + " " + this.faceValue;
+	}
+
+}

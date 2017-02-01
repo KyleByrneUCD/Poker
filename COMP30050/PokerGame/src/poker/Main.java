@@ -1,0 +1,38 @@
+package poker;
+
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+		ArrayList<PlayingCard> deck = new ArrayList<PlayingCard>();
+		for (int i = 0; i < 4; i++) // Loop through suits
+		{
+			for (int j = 0; j < 13; j++) // Loop through faces
+			{
+				switch (i) // Create Cards
+				{
+				case 0:
+					deck.add(new PlayingCard(PlayingCard.FACES[j], PlayingCard.HEARTS, j + 1));
+					break;
+				case 1:
+					deck.add(new PlayingCard(PlayingCard.FACES[j], PlayingCard.DIAMONDS, j + 1));
+					break;
+				case 2:
+					deck.add(new PlayingCard(PlayingCard.FACES[j], PlayingCard.CLUBS, j + 1));
+					break;
+				case 3:
+					deck.add(new PlayingCard(PlayingCard.FACES[j], PlayingCard.SPADES, j + 1));
+					break;
+				}
+			}
+		}
+		System.out.println("Card\tGame Value\tFace Value");
+		for (PlayingCard card : deck) // Loop through all cards
+		{
+			System.out.println(card.toString() + "\t" + card.getGameValue() + "\t\t" + card.getFaceValue()); // print
+																												// card
+		}
+	}
+
+}
